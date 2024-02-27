@@ -17,32 +17,26 @@
 
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
 <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <script type="text/babel">
+  // console.log(React)
+  // console.log(ReactDOM)
 
-  const App = () => {
-    const [buttonText, setButtonText] = React.useState('Click me please')
-
-    const onClickHandler = () => {
-      setButtonText(`React clicked! ${Date.now()} `)
-    }
-
-    console.log('App called')
-
-    return (
-        <div>
-          <h1>Hello from React!</h1>
-          <button id="button" onClick={onClickHandler}>
-            {buttonText}
-          </button>
-        </div>
-    )
-  }
+  // const headerElement = React.createElement('h1', null, 'Hello from React!')
+  const headerElement = <>
+    <h1>Hello from React!</h1>
+    <h1>Hello from React!</h1>
+    <h1>Hello from React!</h1>
+    <h1>Hello from React!</h1>
+  </>;
 
   const container = document.getElementById('root')
   const root = ReactDOM.createRoot(container)
-  root.render(<App/>)
+  // console.log(root)
+
+  root.render(headerElement)
 
 </script>
 

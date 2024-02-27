@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    .btn-info {
+      background-color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<div id="vanilla-js">
+  <button id="button" onclick="changeButtonText('button')">Click me</button>
+</div>
+
+<script>
+
+  const changeButtonText = (elementId) => {
+    const btn = document.getElementById(elementId)
+    btn.textContent = 'Hello from Vanilla JS'
+    btn.className = 'btn-info'
+  }
+
+  const headerElement = document.createElement('h1')
+  headerElement.textContent = 'Hello from Vanilla JS'
+  document.getElementById('vanilla-js').append(headerElement)
+
+</script>
+
+</body>
+</html>
