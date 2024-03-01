@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    .btn-info {
+      background-color: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+  const App = () => {
+    const [buttonText, setButtonText] = React.useState('Click me please')
+    const [classesList, setClassesList] = React.useState('')
+
+    console.log(classesList)
+
+    const onClickHandler = () => {
+      setButtonText(`React clicked! ${Date.now()}`)
+      setClassesList('btn-info')
+    }
+
+    console.log('App called')
+
+    return (
+        <div>
+          <h1>Hello from React!</h1>
+          <button id="button" onClick={onClickHandler} className={classesList}>
+            {buttonText}
+          </button>
+        </div>
+    )
+  }
+
+  const container = document.getElementById('root')
+  const root = ReactDOM.createRoot(container)
+  root.render(<App/>)
+
+</script>
+
+</body>
+</html>
