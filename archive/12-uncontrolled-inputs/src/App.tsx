@@ -1,10 +1,11 @@
-import LoginForm from './components/LoginForm.tsx'
+import LoginFormRef from './components/LoginFormRef.tsx'
 
 const App = () => {
   return (
     <div className="container">
       <h1 className="my-5">Uncontrolled Inputs</h1>
-      <LoginForm />
+      {/*<LoginForm />*/}
+      <LoginFormRef />
     </div>
   )
 }
