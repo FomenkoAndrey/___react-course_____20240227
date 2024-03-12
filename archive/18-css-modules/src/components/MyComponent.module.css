@@ -1,0 +1,21 @@
+.wrapper {
+  display: block;
+}
+
+.wrapper h1 {
+  color: yellow;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper h2 {
+  color: orange;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header3 {
+  color: magenta;
+  text-transform: uppercase;
+  text-align: center;
+}

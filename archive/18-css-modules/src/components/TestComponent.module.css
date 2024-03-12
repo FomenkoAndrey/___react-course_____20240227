@@ -1,0 +1,6 @@
+.wrapper h1 {
+  color: cyan;
+  text-transform: uppercase;
+  text-align: right;
+  text-decoration: underline;
+}
