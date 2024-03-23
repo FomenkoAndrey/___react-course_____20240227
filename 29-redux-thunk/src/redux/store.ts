@@ -1,5 +1,5 @@
 import { Action, configureStore, Dispatch, Middleware, MiddlewareAPI } from '@reduxjs/toolkit'
-import counterReductor, { initialState } from './reducers.ts'
+import counterReducer, { initialState } from './reducers.ts'
 import { CounterAction, CounterState, RootState } from './types.ts'
 
 const logger: Middleware = (storeApi: MiddlewareAPI<Dispatch, RootState>) => (next) => (action) => {
@@ -16,7 +16,7 @@ const logger: Middleware = (storeApi: MiddlewareAPI<Dispatch, RootState>) => (ne
 
 const store = configureStore({
   reducer: {
-    counter: (state: CounterState = initialState, action: Action) => counterReductor(state, action as CounterAction)
+    counter: (state: CounterState = initialState, action: Action) => counterReducer(state, action as CounterAction)
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })
